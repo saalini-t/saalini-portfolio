@@ -1,0 +1,99 @@
+baseURL: "https://saalini.netlify.app"
+languageCode: en-us
+title: saalini
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 40
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:             
+    enabled: true
+    title: "Saalini Thirunavukkarasu"
+    subtitle:  Hi 👋 I'm Saalini, a tech enthusiast with a passion for solving complex problems. I’m a Python programmer with proficiency in C and C++, and I’m currently diving into JavaScript. I thrive on learning and coding, constantly working on new and exciting projects. When I’m not coding, you might find me playing table tennis or enjoying a swim. While I’m dedicated and productive, I also value having fun with those around me. I’m an extroverted and easy-going person, always looking forward to new experiences and opportunities in life.
+
+ 
+    imageUrl: ""
+    imageWidth: 220
+    imageHeight: "/home/WhatsApp%20Image%202024-08-31%20at%2012.44.51%20PM.jpeg"
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "saalini.t@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/saalini-t"
+    - name: "github"
+      url: "https://github.com/saalini-t"
+    
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
